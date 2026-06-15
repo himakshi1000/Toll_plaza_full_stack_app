@@ -1,0 +1,124 @@
+.table-container {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vehicle-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.vehicle-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.vehicle-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.vehicle-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.vehicle-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.vehicle-table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.vehicle-table td.plate {
+  font-weight: 600;
+  color: #667eea;
+  font-family: monospace;
+}
+
+.vehicle-table td.type {
+  text-transform: capitalize;
+  color: #666;
+}
+
+.vehicle-table td.timestamp {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.vehicle-table td.fee {
+  font-weight: 600;
+  color: #28a745;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-paid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-violation {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.loading,
+.no-records {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .vehicle-table {
+    font-size: 0.85rem;
+  }
+
+  .vehicle-table th,
+  .vehicle-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .status-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
